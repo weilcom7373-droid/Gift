@@ -74,7 +74,7 @@ st.markdown("<h1 class='center-text'>🎁 送你的驚喜禮物</h1>", unsafe_al
 # 3. 遊戲邏輯
 if st.session_state.clicks < 10:
     # 第一階段：點擊圖片計數
-    st.markdown(f"<h3 class='center-text'>還要拆解 {10 - st.session_state.clicks} 次！</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 class='center-text'>還要點擊 {10 - st.session_state.clicks} 次！</h3>", unsafe_allow_html=True)
     
     if st.button("ClickMe"):
         st.session_state.clicks += 1
