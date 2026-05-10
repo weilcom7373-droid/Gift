@@ -42,7 +42,7 @@ if st.session_state.clicks < 10:
     st.markdown(f"<h3 class='text-center'>請點擊禮物盒拆開它<br>({st.session_state.clicks} / 10)</h3>", unsafe_allow_html=True)
     
     # 建立一個置中的按鈕
-    if st.button("🎁"):
+    if st.button("https://drive.google.com/file/d/1F9lAIRkmhpqwZesoZoT2Gq4j8fs1Z0W2/view?usp=drivesdk"):
         st.session_state.clicks += 1
         st.rerun()
 
@@ -51,22 +51,22 @@ elif not st.session_state.unlocked:
     st.balloons() # 點完 10 次噴氣球
     st.markdown("<h3 class='text-center'>🔒 盒子被鎖住了！</h3>", unsafe_allow_html=True)
     
-    password = st.text_input("請輸入今天的日期 (YYYYMMDD)：", type="password")
+    password = st.text_input("請輸入今天的日期 (YYYYMMDD)，並在後方拼出母親節快樂的英文（不用空格與大寫）：", type="password")
     
-    if password == "20260510":
+    if password == "20260510happymother'sday":
         st.success("密碼正確！")
         if st.button("點擊查看驚喜 ✨"):
             st.session_state.unlocked = True
             st.rerun()
     elif password != "":
-        st.error("日期不對喔，再試一次！")
+        st.error("密碼不對喔，再試一次！")
 
 else:
     # 階段 3：顯示圖片
     st.markdown("<h2 class='text-center'>🎉 驚喜揭曉！ 🎉</h2>", unsafe_allow_html=True)
     
     # --- 在這裡替換你的圖片網址 ---
-    st.image("https://placekitten.com/800/600", caption="這是我準備的驚喜圖片", use_container_width=True)
+    st.image("https://drive.google.com/file/d/18w-ZSzSB2UtnhgYWZah48iROFPGJZd3M/view?usp=drivesdk", caption="這是我準備的禮物", use_container_width=True)
     
     st.balloons()
     st.snow()
