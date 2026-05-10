@@ -42,7 +42,7 @@ if st.session_state.clicks < 10:
     st.markdown(f"<h3 class='text-center'>請點擊禮物盒拆開它<br>({st.session_state.clicks} / 10)</h3>", unsafe_allow_html=True)
     
     # 建立一個置中的按鈕
-    if st.button("https://drive.google.com/file/d/1F9lAIRkmhpqwZesoZoT2Gq4j8fs1Z0W2/view?usp=drivesdk"):
+    if st.button(https://drive.google.com/file/d/1F9lAIRkmhpqwZesoZoT2Gq4j8fs1Z0W2/view?usp=drivesdk):
         st.session_state.clicks += 1
         st.rerun()
 
